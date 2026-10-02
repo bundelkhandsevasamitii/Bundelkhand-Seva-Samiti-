@@ -41,15 +41,15 @@ nav{
     font-weight:bold;
     color:#124e78;
 }
-    
+
+/* HEADER LOGO */
 .logo-icon{
     width:42px;
     height:42px;
     border-radius:50%;
-    background-image:url("https://i.imgur.com/Fk73yNP.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    object-fit:cover;
+    object-position:center;
+    display:block;
     flex-shrink:0;
 }
 
@@ -326,17 +326,41 @@ footer p{
 <nav>
 
     <div class="logo">
-    <img src="https://i.imgur.com/Fk73yNP.png" alt="Bundelkhand Seva Samiti Logo">
-    <span>Bundelkhand Seva Samiti</span>
+
+        <img
+            class="logo-icon"
+            src="https://i.imgur.com/Fk73yNP.png"
+            alt="Bundelkhand Seva Samiti Logo"
+        >
+
+        <span>Bundelkhand Seva Samiti</span>
+
     </div>
 
     <ul class="nav-links" id="navLinks">
+
         <li><a href="#">Home</a></li>
-        <li><a href="about.html">हमारे बारे में</a></li>
-        <li><a href="#">हमारी गतिविधियाँ</a></li>
-        <li><a href="#">प्रोजेक्ट्स</a></li>
-        <li><a href="#">गैलरी</a></li>
-        <li><a href="#">संपर्क</a></li>
+
+        <li>
+            <a href="about.html">हमारे बारे में</a>
+        </li>
+
+        <li>
+            <a href="#">हमारी गतिविधियाँ</a>
+        </li>
+
+        <li>
+            <a href="#">प्रोजेक्ट्स</a>
+        </li>
+
+        <li>
+            <a href="#">गैलरी</a>
+        </li>
+
+        <li>
+            <a href="#">संपर्क</a>
+        </li>
+
     </ul>
 
     <div class="menu" onclick="toggleMenu()">☰</div>
@@ -378,8 +402,13 @@ footer p{
 <section class="section">
 
     <div class="section-title">
+
         <h2>हमारे बारे में</h2>
-        <p>सेवा से विकास की ओर एक कदम</p>
+
+        <p>
+            सेवा से विकास की ओर एक कदम
+        </p>
+
     </div>
 
     <div class="intro">
@@ -430,39 +459,58 @@ footer p{
     <div class="cards">
 
         <div class="card">
+
             <div class="card-icon">📚</div>
+
             <h3>शिक्षा</h3>
+
             <p>
                 बच्चों और युवाओं के लिए शिक्षा एवं डिजिटल
                 सीखने के अवसर।
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="card-icon">💼</div>
+
             <h3>रोजगार</h3>
+
             <p>
                 युवाओं को कौशल, रोजगार और स्वरोजगार की
                 जानकारी एवं अवसर।
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="card-icon">🌾</div>
+
             <h3>ग्रामीण विकास</h3>
+
             <p>
                 ग्रामीण क्षेत्रों में विकास और स्थानीय
                 संसाधनों को बढ़ावा देना।
             </p>
+
         </div>
 
+
         <div class="card">
+
             <div class="card-icon">🤝</div>
+
             <h3>सामाजिक सेवा</h3>
+
             <p>
                 जरूरतमंद लोगों तक सहायता और सामाजिक
                 जागरूकता पहुँचाना।
             </p>
+
         </div>
 
     </div>
@@ -481,7 +529,7 @@ footer p{
     </p>
 
     <a href="volunteer.html" class="btn btn-primary">
-    Volunteer बनें
+        Volunteer बनें
     </a>
 
 </section>
