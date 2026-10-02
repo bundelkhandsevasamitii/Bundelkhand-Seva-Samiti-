@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bundelkhand Seva Samiti | सेवा • शिक्षा • विकास</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f7f9fc;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    width:100%;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 7%;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:20px;
+    font-weight:bold;
+    color:#124e78;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#124e78;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+.nav-links a:hover{
+    color:#e67e22;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    padding:70px 7%;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.25)),
+    url("https://images.unsplash.com/photo-1509099836639-18ba02c0d754?auto=format&fit=crop&w=1600&q=85");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#f5a623;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 27px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.btn-primary{
+    background:#e67e22;
+    color:white;
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+/* INTRO */
+.section{
+    padding:70px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:35px;
+    color:#124e78;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+}
+
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.intro img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.intro-text h2{
+    color:#124e78;
+    font-size:32px;
+    margin-bottom:18px;
+}
+
+.intro-text p{
+    color:#555;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#124e78;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+/* CTA */
+.cta{
+    margin:0 7% 70px;
+    padding:55px 30px;
+    border-radius:18px;
+    text-align:center;
+    background:#124e78;
+    color:white;
+}
+
+.cta h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+    background:#102f43;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#d8e1e7;
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        padding:20px 7%;
+        gap:18px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero{
+        min-height:570px;
+        padding:50px 7%;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:16px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .btn{
+        display:block;
+        text-align:center;
+        margin:10px 0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:55px 6%;
+    }
+
+    .cta{
+        margin:0 6% 50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <div class="logo">
+        <div class="logo-icon">ॐ</div>
+        Bundelkhand Seva Samiti
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">हमारे बारे में</a></li>
+        <li><a href="#">हमारी गतिविधियाँ</a></li>
+        <li><a href="#">प्रोजेक्ट्स</a></li>
+        <li><a href="#">गैलरी</a></li>
+        <li><a href="#">संपर्क</a></li>
+    </ul>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            बुंदेलखंड के लिए<br>
+            <span>सेवा और विकास</span>
+        </h1>
+
+        <p>
+            Bundelkhand Seva Samiti का उद्देश्य शिक्षा,
+            रोजगार, ग्रामीण विकास और सामाजिक जागरूकता
+            के माध्यम से बुंदेलखंड के लोगों के लिए बेहतर
+            भविष्य का निर्माण करना है।
+        </p>
+
+        <a href="#" class="btn btn-primary">
+            हमारे कार्य देखें
+        </a>
+
+        <a href="#" class="btn btn-secondary">
+            हमारे साथ जुड़ें
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="section">
+
+    <div class="section-title">
+        <h2>हमारे बारे में</h2>
+        <p>सेवा से विकास की ओर एक कदम</p>
+    </div>
+
+    <div class="intro">
+
+        <img
+        src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1000&q=85"
+        alt="Education">
+
+        <div class="intro-text">
+
+            <h2>Bundelkhand Seva Samiti</h2>
+
+            <p>
+                Bundelkhand Seva Samiti एक सामाजिक पहल है,
+                जिसका उद्देश्य बुंदेलखंड क्षेत्र में शिक्षा,
+                रोजगार, ग्रामीण विकास, डिजिटल जागरूकता और
+                सामाजिक सेवा को बढ़ावा देना है।
+            </p>
+
+            <br>
+
+            <p>
+                हमारा प्रयास है कि स्थानीय युवाओं को अवसर,
+                विद्यार्थियों को बेहतर शिक्षा और ग्रामीण
+                समुदायों को विकास की नई संभावनाएँ मिलें।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>हमारी प्राथमिकताएँ</h2>
+
+        <p>
+            समाज और क्षेत्र के विकास के लिए हमारे प्रमुख क्षेत्र
+        </p>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">📚</div>
+            <h3>शिक्षा</h3>
+            <p>
+                बच्चों और युवाओं के लिए शिक्षा एवं डिजिटल
+                सीखने के अवसर।
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">💼</div>
+            <h3>रोजगार</h3>
+            <p>
+                युवाओं को कौशल, रोजगार और स्वरोजगार की
+                जानकारी एवं अवसर।
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🌾</div>
+            <h3>ग्रामीण विकास</h3>
+            <p>
+                ग्रामीण क्षेत्रों में विकास और स्थानीय
+                संसाधनों को बढ़ावा देना।
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🤝</div>
+            <h3>सामाजिक सेवा</h3>
+            <p>
+                जरूरतमंद लोगों तक सहायता और सामाजिक
+                जागरूकता पहुँचाना।
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>बदलाव की शुरुआत हमसे होती है</h2>
+
+    <p>
+        समाज के विकास में अपना योगदान देने के लिए
+        Bundelkhand Seva Samiti के साथ जुड़ें।
+    </p>
+
+    <a href="#" class="btn btn-primary">
+        Volunteer बनें
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h3>Bundelkhand Seva Samiti</h3>
+
+    <p>
+        सेवा • शिक्षा • रोजगार • ग्रामीण विकास
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 Bundelkhand Seva Samiti. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
